@@ -1,0 +1,2 @@
+module TestTinymcesHelper
+end

@@ -1,0 +1,15 @@
+<h1>Test</h1>
+<%= simple_form_for(@tinymce) do |f| %>
+	<%= text_area_tag :tinymce, "", :class => "tinymce", :rows => 40, :cols => 120 %>
+	<%= tinymce %> 
+
+	<% f.submit "送出" %>
+<% end %>
+
+<script type="text/javascript">
+tinyMCE.init({
+	mode: 'textareas'
+	theme: 'advanced'
+	language: 'de'
+});
+</script>

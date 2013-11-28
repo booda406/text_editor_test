@@ -1,0 +1,27 @@
+<h1>Listing cktests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cktests.each do |cktest| %>
+      <tr>
+        <td><%= raw(cktest.content) %></td>
+        <td><%= link_to 'Show', cktest %></td>
+        <td><%= link_to 'Edit', edit_cktest_path(cktest) %></td>
+        <td><%= link_to 'Destroy', cktest, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cktest', new_cktest_path %>
